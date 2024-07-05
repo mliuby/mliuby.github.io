@@ -21,12 +21,12 @@ repository               : "mliuby/mliuby.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "robo.png"
+  avatar           : "robo.jpg"
   name             : "Mark Minghao LIU"
   pronouns         : "he/him"  
   bio              : "Undergraduate at HKUST"
   location         : "Hong Kong"
-  employer         : "The Hong Kong University of Science and Technology"
+  employer         : "HKUST"
   uri              : https://mliuby.github.io
   email            : "mliuby@connect.ust.hk" 
 
