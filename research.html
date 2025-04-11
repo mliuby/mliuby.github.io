@@ -13,11 +13,40 @@
       padding: 20px;
       background: #fdfdfd;
     }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0366d6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <nav style="text-align: center; margin-bottom: 20px;">
+  <nav>
     <a href="index.html">Home</a> |
     <a href="publications.html">Publications</a> |
     <a href="research.html">Research</a> |
@@ -25,32 +54,42 @@
   </nav>
 
   <h2>Research Experience</h2>
-  <ul>
-    <li><strong>UROP, HKUST</strong> — Advisor: Dan Xu (Jun–Aug 2023)
-      <ul>
-        <li>Depth estimation using diffusion models with UNet-based architecture.</li>
-        <li>Designed interpolation algorithm for NYU-Depth V2 dataset.</li>
-      </ul>
-    </li>
-    <li><strong>UROP, HKUST</strong> — Advisor: Yu Hu (Sep–Dec 2023)
-      <ul>
-        <li>Studied Firing Rate Network Model on zebrafish neural data.</li>
-        <li>Applied PINNs and statistical learning to brain-wide simulation.</li>
-      </ul>
-    </li>
-    <li><strong>KnowComp Group, HKUST</strong> — Advisor: Yangqiu Song (Feb–Sep 2024)
-      <ul>
-        <li><strong>BrainASER</strong>: Analyzing alignment between fMRI brain activity and knowledge graphs.</li>
-        <li><strong>IntentionQA</strong>: Built benchmark to test purchase intent comprehension in LMs.</li>
-      </ul>
-    </li>
-    <li><strong>RenLab, HKUST</strong> — Advisor: <a href="https://mayrfung.github.io/" target="_blank">Yi R. (May) Fung</a> (Feb 2025 – Present)
-      <ul>
-        <li>Exploring interpretability in multimodal LLMs (e.g., LLaVA), focusing on hallucinations.</li>
-        <li>Developing evaluation for medical image editing and multimodal outputs.</li>
-      </ul>
-    </li>
-  </ul>
+
+  <div class="card">
+    <h3>UROP, HKUST — Advisor: Dan Xu (Jun–Aug 2023)</h3>
+    <ul>
+      <li>Worked on depth estimation using diffusion models.</li>
+      <li>Implemented UNet-based architecture inspired by <i>DepthGen</i>.</li>
+      <li>Designed interpolation algorithm for NYU-Depth V2 to reduce distribution shift.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>UROP, HKUST — Advisor: Yu Hu (Sep–Dec 2023)</h3>
+    <ul>
+      <li>Studied the Firing Rate Network Model to simulate zebrafish neural dynamics.</li>
+      <li>Analyzed neural data using statistical and machine learning methods.</li>
+      <li>Applied Physics-Informed Neural Networks (PINNs) to model recurrent circuits.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>KnowComp Group, HKUST — Advisor: Yangqiu Song (Feb–Sep 2024)</h3>
+    <ul>
+      <li><strong>BrainASER</strong>: Explored structural alignment between fMRI brain data and knowledge graphs.</li>
+      <li><strong>IntentionQA</strong>: Co-authored <a href="https://arxiv.org/abs/2406.10173" target="_blank">IntentionQA</a> (Findings of EMNLP 2024).
+        <br />Contributed to dataset design, evaluation, and analysis.
+        <br />Project GitHub: <a href="https://github.com/HKUSTKnowComp/IntentionQA" target="_blank">IntentionQA</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>RenLab, HKUST — Advisor: <a href="https://mayrfung.github.io/" target="_blank">Yi R. (May) Fung</a> (Feb 2025 – Present)</h3>
+    <ul>
+      <li>Researching interpretability in multimodal LLMs (e.g., LLaVA), especially hallucinations from text-only reliance.</li>
+      <li>Developing evaluation pipelines for medical image editing in clinical NLP applications.</li>
+    </ul>
+  </div>
 
 </body>
 </html>
