@@ -8,26 +8,85 @@
     html {
       scroll-behavior: smooth;
     }
+
     body {
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.6;
-      max-width: 900px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px 20px;
       background: #fdfdfd;
+      color: #222;
     }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0366d6;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.4em;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .section {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 20px 25px;
+      margin-top: 25px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+
     .email {
       color: #0366d6;
     }
+
     img {
       max-width: 100%;
       height: auto;
+    }
+
+    .profile-img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      width: 100px;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
 
-  <nav style="text-align: center; margin-bottom: 20px;">
+  <nav>
     <a href="#publications">Publications</a> |
     <a href="#research">Research</a> |
     <a href="#activities">Activities</a> |
@@ -35,53 +94,60 @@
   </nav>
 
   <h1>Minghao (Mark) Liu</h1>
-  <img src="images/Me.jpg" alt="Minghao Liu" width="100" style="border-radius: 50%; margin-top: 10px;" />
-  <p>The Hong Kong University of Science and Technology, Hong Kong SAR, China</p>
-  <p>Email: <a class="email" href="mailto:mliuby@connect.ust.hk">mliuby@connect.ust.hk</a></p>
-  <p>
+  <img src="images/Me.jpg" alt="Minghao Liu" class="profile-img" />
+  <p style="text-align: center;">The Hong Kong University of Science and Technology, Hong Kong SAR, China</p>
+  <p style="text-align: center;">
+    Email: <a class="email" href="mailto:mliuby@connect.ust.hk">mliuby@connect.ust.hk</a>
+  </p>
+  <p style="text-align: center;">
     <a href="https://x.com/liu34836428" target="_blank">X / Twitter</a> |
     <a href="https://scholar.google.com/citations?user=o37OuuAAAAAJ&hl=en" target="_blank">Google Scholar</a> |
     <a href="https://www.linkedin.com/in/minghao-liu-2a70a9280/" target="_blank">LinkedIn</a> |
     WeChat: <code>binghailong2004</code>
   </p>
 
-  <hr style="margin: 30px 0;">
+  <div class="section">
+    <h2 id="about">About Me</h2>
+    <p>
+      Hello, I am currently a third-year student majoring in Computer Science and minoring in Mathematics at HKUST.
+      I am an intern at RenLab, led by <a href="https://mayrfung.github.io/" target="_blank">Yi R. (May) Fung</a>.
+    </p>
+    <p>
+      My research interests lie in Natural Language Processing (NLP) and multimodality.
+      Specifically, I am interested in exploring interpretable methods to guide (vision-)language models' behavior and make them more reliable tools for solving real-world problems.
+      I am also interested in discovering the limitations and boundaries of current models through explainable benchmarking.
+    </p>
+  </div>
 
-  <h2 id="about">About Me</h2>
-  <p>
-    Hello, I am currently a third-year student majoring in Computer Science and minoring in Mathematics at HKUST.
-    I am an intern at RenLab, led by <a href="https://mayrfung.github.io/" target="_blank">Yi R. (May) Fung</a>.
-  </p>
-  <p>
-    My research interests lie in Natural Language Processing (NLP) and multimodality.
-    Specifically, I am interested in exploring interpretable methods to guide (vision-)language models' behavior and make them more reliable tools for solving real-world problems.
-    I am also interested in discovering the limitations and boundaries of current models through explainable benchmarking.
-  </p>
+  <div class="section">
+    <h2 id="education">Education</h2>
+    <ul>
+      <li>
+        <strong>BEng in Computer Science</strong><br>
+        HKUST, Hong Kong SAR | 2022–2026 (expected)
+      </li>
+      <br>
+      <li>
+        <strong>Exchange Student</strong><br>
+        McKelvey School of Engineering, Washington University in St. Louis | Fall 2024
+      </li>
+    </ul>
+  </div>
 
-  <h2 id="education">Education</h2>
-  <ul>
-    <li>
-      <strong>BEng in Computer Science</strong><br>
-      HKUST, Hong Kong SAR &nbsp; | &nbsp; 2022–2026 (expected)
-    </li>
-    <br>
-    <li>
-      <strong>Exchange Student</strong><br>
-      McKelvey School of Engineering, Washington University in St. Louis &nbsp; | &nbsp; Fall 2024
-    </li>
-  </ul>
+  <div class="section">
+    <h2 id="publications">Publications</h2>
+    <div id="publications-content">Loading publications...</div>
+  </div>
 
-  <!-- Publications section loaded from external file -->
-  <h2 id="publications">Publications</h2>
-  <div id="publications-content">Loading publications...</div>
+  <div class="section">
+    <h2 id="research">Research</h2>
+    <div id="research-content">Loading research...</div>
+  </div>
 
-  <!-- Research section loaded from external file -->
-  <h2 id="research">Research</h2>
-  <div id="research-content">Loading research...</div>
-
-  <!-- Activities section loaded from external file -->
-  <h2 id="activities">Activities</h2>
-  <div id="activities-content">Loading activities...</div>
+  <div class="section">
+    <h2 id="activities">Activities</h2>
+    <div id="activities-content">Loading activities...</div>
+  </div>
 
   <script>
     function loadSection(targetId, file) {
@@ -90,7 +156,7 @@
         .then(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, "text/html");
-          const bodyContent = doc.querySelector("body").innerHTML;
+          const bodyContent = doc.querySelector("body")?.innerHTML || html;
           document.getElementById(targetId).innerHTML = bodyContent;
         })
         .catch(error => {
@@ -99,9 +165,9 @@
         });
     }
 
-    loadSection("publications-content", "publications.html");
-    loadSection("research-content", "research.html");
-    loadSection("activities-content", "activities.html");
+    loadSection("publications-content", "publications-section.html");
+    loadSection("research-content", "research-section.html");
+    loadSection("activities-content", "activities-section.html");
   </script>
 
 </body>
