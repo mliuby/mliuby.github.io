@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publications | Minghao Liu</title>
+  <title>Minghao (Mark) Liu | Home</title>
   <style>
     body {
       font-family: sans-serif;
@@ -13,38 +13,93 @@
       padding: 20px;
       background: #fdfdfd;
     }
+    .email {
+      color: #0366d6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
 
   <nav style="text-align: center; margin-bottom: 20px;">
-    <a href="index.html">Home</a> |
-    <a href="publications.html">Publications</a> |
-    <a href="research.html">Research</a> |
-    <a href="activities.html">Activities</a>
+    <a href="#publications">Publications</a> |
+    <a href="#research">Research</a> |
+    <a href="#activities">Activities</a> |
+    <a href="LIU_Minghao_CV.pdf" target="_blank">CV</a>
   </nav>
 
-  <h2>Publications</h2>
+  <h1>Minghao (Mark) Liu</h1>
+  <img src="images/Me.jpg" alt="Minghao Liu" width="100" style="border-radius: 50%; margin-top: 10px;" />
+  <p>The Hong Kong University of Science and Technology, Hong Kong SAR, China</p>
+  <p>Email: <a class="email" href="mailto:mliuby@connect.ust.hk">mliuby@connect.ust.hk</a></p>
+  <p>
+    <a href="https://x.com/liu34836428" target="_blank">X / Twitter</a> |
+    <a href="https://scholar.google.com/citations?user=o37OuuAAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+    <a href="https://www.linkedin.com/in/minghao-liu-2a70a9280/" target="_blank">LinkedIn</a> |
+    WeChat: <code>binghailong2004</code>
+  </p>
+
+  <hr style="margin: 30px 0;">
+
+  <h2 id="about">About Me</h2>
+  <p>
+    Hello, I am currently a third-year student majoring in Computer Science and minoring in Mathematics at HKUST.
+    I am an intern at RenLab, led by <a href="https://mayrfung.github.io/" target="_blank">Yi R. (May) Fung</a>.
+  </p>
+  <p>
+    My research interests lie in Natural Language Processing (NLP) and multimodality.
+    Specifically, I am interested in exploring interpretable methods to guide (vision-)language models' behavior and make them more reliable tools for solving real-world problems.
+    I am also interested in discovering the limitations and boundaries of current models through explainable benchmarking.
+  </p>
+
+  <h2 id="education">Education</h2>
   <ul>
     <li>
-      <strong>A Benchmark for Evaluating Purchase Intention Comprehension Abilities of Large Language Models in E-commerce</strong><br>
-      Wenxuan Ding*, Weiqi Wang*, Sze Heng Douglas Kwok, <strong>Minghao Liu</strong>, et al.<br>
-      <i>Findings of EMNLP 2024</i><br>
-      [<a href="https://arxiv.org/abs/2406.10173" target="_blank">arXiv</a>] |
-      [<a href="https://github.com/HKUSTKnowComp/IntentionQA" target="_blank">code</a>]
+      <strong>BEng in Computer Science</strong><br>
+      HKUST, Hong Kong SAR &nbsp; | &nbsp; 2022–2026 (expected)
     </li>
-    
+    <br>
     <li>
-      
-      <strong>MedEBench: Revisiting Text-instructed Image Editing on Medical Domain</strong><br>
-      <strong>Minghao Liu</strong>, Zhitao He, Zhiyuan Fan, Qingyun Wang, Yi R. Fung<br>
-      <i>In submission</i>
-      [<a href="https://arxiv.org/abs/2506.01921" target="_blank">arXiv</a>] |
-      [<a href="https://mliuby.github.io/MedEBench_Website/" target="_blank">website</a>]
-      <img src="images/MedEBench_overview.png" alt="MedEBench Overview" style="margin-bottom: 10px; max-width: 100%; border: 1px solid #ddd; border-radius: 6px;" />
+      <strong>Exchange Student</strong><br>
+      McKelvey School of Engineering, Washington University in St. Louis &nbsp; | &nbsp; Fall 2024
     </li>
-   
   </ul>
+
+  <!-- Publications section loaded from external file -->
+  <h2 id="publications">Publications</h2>
+  <div id="publications-content">Loading publications...</div>
+
+  <!-- Research section loaded from external file -->
+  <h2 id="research">Research</h2>
+  <div id="research-content">Loading research...</div>
+
+  <!-- Activities section loaded from external file -->
+  <h2 id="activities">Activities</h2>
+  <div id="activities-content">Loading activities...</div>
+
+  <script>
+    function loadSection(targetId, file) {
+      fetch(file)
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const bodyContent = doc.querySelector("body").innerHTML;
+          document.getElementById(targetId).innerHTML = bodyContent;
+        })
+        .catch(error => {
+          document.getElementById(targetId).innerHTML = `<p style="color:red;">Failed to load ${file}.</p>`;
+          console.error(`Error loading ${file}:`, error);
+        });
+    }
+
+    loadSection("publications-content", "publications.html");
+    loadSection("research-content", "research.html");
+    loadSection("activities-content", "activities.html");
+  </script>
 
 </body>
 </html>
